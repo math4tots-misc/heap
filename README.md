@@ -13,11 +13,9 @@ usage
 -----
     
 ```Python
-# The heap package contains just 
-# the one heap module which in turn contains just
-# the one `heap` class
-# Wanted to make it `from heap import heap` but that just dosen't
-# seem like how `setup.py` likes doing things.
+# The `heap` package contains
+# just the one `heap` module which in turn contains
+# just the one `heap` class
 from heap.heap import heap
 
 h = heap([4,2,3])
