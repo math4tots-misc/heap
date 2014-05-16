@@ -14,13 +14,13 @@ usage
 -----
 
 So far `heap` only implements the methods
-  __init__
-  __len__
-  __contains__
-  add
-  remove
-  pop
-  peek
+    __init__
+    __len__
+    __contains__
+    add
+    remove
+    pop
+    peek
 
 `heap` also has a class variable
   _REMOVE
