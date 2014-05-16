@@ -27,7 +27,7 @@ class heap(object):
 		if priorities is None:
 			# if priorities aren't specified or is None, 
 			# we use the items themselves as priorities
-			priorities = list(items)
+			priorities = items
 		
 		counter = count()
 		self._entries = [[priority, next(counter), item] for priority, item in zip(priorities, items)]
