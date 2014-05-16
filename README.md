@@ -14,7 +14,9 @@ usage
     
 ```Python
 # The heap module contains just the one class `heap`
-from heap import heap
+# Wanted to make it `from heap import heap` but that just dosen't
+# seem like how `setup.py` likes doing things.
+from heap.heap import heap
 
 h = heap([4,2,3])
 
