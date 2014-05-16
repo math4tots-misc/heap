@@ -14,31 +14,33 @@ Perhaps if enough people find `heap` useful, it might be a great additions to `c
 usage
 -----
     
-    # The heap module contains just the one class `heap`
-    from heap import heap
-    
-    h = heap([4,2,3])
-    
-    # heap.add(item,priority=None) adds a new item if item is not already in heap.
-    # If the item is already in heap, the method updates the priority.
-    # 
-    # heap.add(item) # is equivalent to
-    # heap.add(item,None) # which is also equivalent to
-    # heap.add(item,item)
-    
-    for i in reversed(range(4,7)):
-      h.add(i)
-    
-    # removing an item is amortized constant time.
-    # (items are marked as removed and then actually removed 
-    # during calls to `pop` or `peek`)
-    h.remove(5)
-    
-    # checking whether an item is in a heap is as fast as a single dictionary lookup.
-    print(6 in h) # True
-    print(5 in h) # False
-    
-    print(h.pop()) # 2
+```Python
+# The heap module contains just the one class `heap`
+from heap import heap
+
+h = heap([4,2,3])
+
+# heap.add(item,priority=None) adds a new item if item is not already in heap.
+# If the item is already in heap, the method updates the priority.
+# 
+# heap.add(item) # is equivalent to
+# heap.add(item,None) # which is also equivalent to
+# heap.add(item,item)
+
+for i in reversed(range(4,7)):
+  h.add(i)
+
+# removing an item is amortized constant time.
+# (items are marked as removed and then actually removed 
+# during calls to `pop` or `peek`)
+h.remove(5)
+
+# checking whether an item is in a heap is as fast as a single dictionary lookup.
+print(6 in h) # True
+print(5 in h) # False
+
+print(h.pop()) # 2
+```
 
 implementation
 --------------
