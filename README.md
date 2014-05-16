@@ -54,6 +54,7 @@ implementation
     remove
     pop
     peek
+    __repr__
 
 `heap` also has a class variable
 
