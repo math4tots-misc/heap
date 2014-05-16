@@ -45,7 +45,7 @@ class heap(object):
 		return item in self._entry_finder
 	
 	def add(self,item,priority=None):
-		'Add a new task, or update the priority of an existing task.'
+		'Add a new item, or update the priority of an existing item.'
 		# Again, as in __init__, if priority is not specified or is None, the item itself
 		# serves as the priority.
 		from heapq import heappush
