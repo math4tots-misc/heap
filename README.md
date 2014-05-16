@@ -1,8 +1,6 @@
 heap
 ====
 
-heap implementation based on Python's heapq
-
 The C-implementation of `heapq` in Python's standard library is very fast.
 However heapq doesn't support decreas-key/incrase-key.
 Following guidelines in [the doc](https://docs.python.org/2/library/heapq.html#priority-queue-implementation-notes), this heap implementation supports updating the priority.
