@@ -91,3 +91,19 @@ class heap(object):
 			heappop(self._entries)
 		raise KeyError('peek at an empty heap')
 
+	def __repr__(self):
+		# showing all the items "as is" might not be the best idea,
+		# as some of the items will have self._REMOVED in them.
+		# We should filter out all elements that are self._REMOVED and then reheapify.
+		# 
+		# Of course this is slower than simply returning the list, but converting
+		# the list to a string should take at least linear time anyway, so at the very least
+		# we are not doing any worse in terms of asymptotic runtime.
+		from heapq import heapify
+		
+		self._entries = [entry for entry in self._entries if entry[-1] is not self._REMOVED]
+		heapify(self._entries)
+		
+		# Immitate the way 'deque' shows things.
+		return 'heap('+repr([item for priority, count, item in self._entries])+')'
+
