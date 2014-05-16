@@ -68,13 +68,9 @@ implementation
     pop
     popitem
     peek
-<<<<<<< HEAD
-    __repr__
-=======
     peekitem
     add
     discard
->>>>>>> FETCH_HEAD
 
 `heap` also has a class variable
 
