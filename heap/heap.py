@@ -44,7 +44,7 @@ class heap(MutableMapping):
 	def __getitem__(self,item):
 		"""Returns the priority of given item
 		"""
-		return self._entries[item][0]
+		return self._entry_finder[item][0]
 	
 	def __setitem__(self,item,priority):
 		"""Sets an item to the given priority.
@@ -79,7 +79,8 @@ class heap(MutableMapping):
 	def __len__(self):
 		"""Returns the number of items still in this heap
 		"""
-		return len(self._entry_finder)		
+		return len(self._entry_finder)
+		
 	def __contains__(self,item):
 		"""Returns True if item is still in this heap
 		"""
