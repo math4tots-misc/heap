@@ -3,32 +3,16 @@ heap
 
 heap implementation based on Python's heapq
 
-Python's heapq, when the C-implementation is loaded, is very fast.
+The C-implementation of `heapq` in Python's standard library is very fast.
 However heapq doesn't support decreas-key/incrase-key.
 Following guidelines in [the doc](https://docs.python.org/2/library/heapq.html#priority-queue-implementation-notes), this heap implementation supports updating the priority.
 
 NOTE: The code in the doc turns into a fifo queue when priorities are not explicitly specified. In this implementation, if no priorities are explicitly given, the items themselves are used as the priorities.
 
+Perhaps if enough people find `heap` useful, it might be a great additions to `collections` :3
 
 usage
 -----
-
-So far `heap` only implements the methods
-
-    __init__
-    __len__
-    __contains__
-    add
-    remove
-    pop
-    peek
-
-`heap` also has a class variable
-
-    _REMOVE
-
-for internal use.
-
     
     # The heap module contains just the one class `heap`
     from heap import heap
@@ -56,3 +40,21 @@ for internal use.
     
     print(h.pop()) # 2
 
+implementation
+--------------
+
+`heap` subclasses directly and only from `object`, and implements exactly the methods
+
+    __init__
+    __len__
+    __contains__
+    add
+    remove
+    pop
+    peek
+
+`heap` also has a class variable
+
+    _REMOVE
+
+for internal use.
