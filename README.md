@@ -14,6 +14,7 @@ usage
 -----
 
 So far `heap` only implements the methods
+
     __init__
     __len__
     __contains__
@@ -23,7 +24,9 @@ So far `heap` only implements the methods
     peek
 
 `heap` also has a class variable
-  _REMOVE
+
+    _REMOVE
+
 for internal use.
 
     
