@@ -1,3 +1,18 @@
+"""
+DEPRECATED
+
+Moved to __init__.py
+
+So that users can do
+
+	from heap import heap
+
+instead of 
+
+	from heap.heap import heap
+
+"""
+
 """The C-implementation of heapq runs *very* fast.
 
 However, heapq doesn't support decrease-key/increase-key.
